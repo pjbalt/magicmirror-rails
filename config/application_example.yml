@@ -1,0 +1,6 @@
+# rename this to application.yml and fill out with your data below
+
+DARK_SKY_API_KEY: ""
+LONGITUDE: ""
+LATITUDE: ""
+TIMEZONE: ""

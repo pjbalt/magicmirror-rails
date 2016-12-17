@@ -1,0 +1,37 @@
+.wrapper{:style => "overflow:hidden;"}
+  .date.text-right= render partial: 'date'
+  .time.text-right= render partial: 'time'
+  .forecast.text-right= render partial: 'forecast'
+  .bitstamp.text-right= render partial: 'bitstamp'
+
+:javascript
+  $(document).ready(
+    function() {
+    setInterval(function() {
+      $('.bitstamp').load('/dash/bitstamp');
+  }, 120000);
+  });
+  $(document).ready(
+    function() {
+    setInterval(function() {
+      $('.time').load('/dash/time');
+  }, 60000);
+  });
+  $(document).ready(
+    function() {
+    setInterval(function() {
+      $('.date').load('/dash/date');
+  }, 60000);
+  });
+  $(document).ready(
+    function() {
+    setInterval(function() {
+      $('.forecast').load('/dash/forecast');
+  }, 300000);
+  });
+  $(window).load(function() {
+    $('.bitstamp').load('/dash/bitstamp');
+    $('.time').load('/dash/time');
+    $('.date').load('/dash/date');
+    $('.forecast').load('/dash/forecast');
+  });
