@@ -26,8 +26,3 @@ Currently the API gives you 1K free requests a day https://darksky.net/dev/docs 
 The Bitstamp API allows for 600 requests per 10 minutes - no API key is required to access the endpoint https://www.bitstamp.net/api/v2/ticker/btcusd/.
 ### Optional Android WebView app
 If you want to run this fullscreen in an Android WebView here is a simple app https://github.com/pjbalt/magicmirror-android.
-
-## Notes
-Why a full rails app for this?  Why not, rails rules.
-
-You know you can do all that in JavaScript instead of using the controller methods, right?  Yes, of course, but that’s boring, and I have zero need to optimize performance - my Pi Zero happens to like rendering partials.
