@@ -1,6 +1,11 @@
 .col-sm-8.pull-right
-  %h3 #{@today} #{@current_temp}&deg;
+  %h3 #{@today} #{@current_temp}&deg; / #{precentage_converter(@humidity)}
+  %h4 #{@summary}
 .clearfix
 .col-sm-4.pull-right
   .image_container=display_icon(@icon)
+.clearfix
+.col-sm-8.pull-right
+  %h4 Daily humidity of #{precentage_converter(@today_humidity)}
+  %h4 #{@today_high}&deg; high / #{@today_low}&deg; low
 .clearfix

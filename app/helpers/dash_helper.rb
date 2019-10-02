@@ -24,4 +24,7 @@ module DashHelper
       image_tag "weathericons/clear_crop.png"
     end
   end
+  def precentage_converter(percent_in_float)
+    number_to_percentage(percent_in_float.to_f * 100, precision: 0)
+  end
 end

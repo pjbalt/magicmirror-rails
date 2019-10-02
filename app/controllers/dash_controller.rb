@@ -18,6 +18,11 @@ class DashController < ApplicationController
     forecast = ForecastIO.forecast(ENV["LATITUDE"], ENV["LONGITUDE"])
 
     @today = forecast.currently.summary
+    @humidity = forecast.currently.humidity
+    @summary = forecast.hourly.summary
+    @today_high = forecast.daily.data.first.temperatureHigh.round
+    @today_low = forecast.daily.data.first.temperatureLow.round
+    @today_humidity = forecast.daily.data.first.humidity
     @current_temp = forecast.currently.temperature.round
     @icon = forecast.currently.icon
     render :partial => "dash/forecast"
