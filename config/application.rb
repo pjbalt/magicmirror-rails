@@ -11,5 +11,8 @@ module MagicmirrorRails
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    ForecastIO.configure do |configuration|
+      configuration.api_key = ENV["DARK_SKY_API_KEY"]
+    end
   end
 end

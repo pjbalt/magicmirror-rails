@@ -1,3 +1,4 @@
+require 'open-uri'
 class DashController < ApplicationController
   def index
 
@@ -14,7 +15,6 @@ class DashController < ApplicationController
     render :partial => "dash/date"
   end
   def forecast
-    ForecastIO.api_key = ENV["DARK_SKY_API_KEY"]
     forecast = ForecastIO.forecast(ENV["LATITUDE"], ENV["LONGITUDE"])
 
     @today = forecast.currently.summary
